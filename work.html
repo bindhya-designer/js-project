@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".img").click(function(){
+                var lp=$(".sel").attr("leftp");
+                $(this).animate({
+                    "left": "35%",
+                    "top": "280px",
+                    "height":"300px",
+                    "width":"400px",
+                    "left":"600px",
+                },500,);
+                $(".sel").animate({
+                    "left": lp+"px",
+                    "top": "0px",
+                    "height":"150px",
+                    "width":"150px",
+                },500);
+
+               $("img").removeClass("sel");
+               $(this).addClass("sel");
+            });
+        })
+    </script>
+</head>
+<body>
+    <style>
+        .box1{
+            height: 150px;
+            width: 1550px;
+            /* background-color: darkgoldenrod; */
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        .box2{
+            height: 300px;
+            max-width: 400px;
+            /* background-color: darkseagreen; */
+            margin: auto;
+            margin-top: 280px;
+
+        }
+
+        .img{
+            position: absolute;
+        }
+
+        .img1{left:0px;}
+        .img2{left:150px;}
+        .img3{left:300px;}
+        .img4{left:450px;}
+        .img5{left:600px;}
+        .img6{left:750px;}
+        .img7{left:900px;}
+        .img8{left:1050px;}
+        .img9{left:1200px;}
+        .img10{left:1350px;}
+
+
+        .sel{
+            position: absolute;
+            height:300px;
+            width:500px;
+            left: 400px;
+        }
+
+    </style>
+    <div class="box1">
+        <img class="img1 img" leftp="0" src="istockphoto-513247652-612x612.jpg" height="150px" width="150px">
+        <img class="img2 img" leftp="150" src="rose.jpg" height="150px" width="150px">
+        <img class="img3 img" leftp="300" src="marguerite-729510_640.jpg" height="150px" width="150px">
+        <img class="img4 img" leftp="450" src="Athirapally_falls_in_Thrissur_16.jpg" width="150px" height="150px">
+        <img class="img5 img" leftp="600" src="taj mahal.jpg" width="150px" height="150px">
+        <img class="img6 img" leftp="750" src="konark.jpg" width="150px" height="150px">
+        <img class="img7 img" leftp="900" src="rani ki vav.jpg" width="150px" height="150px">
+        <img class="img8 img" leftp="1050" src="ellora.webp" width="150px" height="150px">
+        <img class="img9 img" leftp="1200" src="Jammu-and-Kashmir-Kashmir-Valley.jpg" width="150px" height="150px">
+        
+    </div>
+    <div class="box2">
+        <img class="img10 img sel" leftp="1350" src="kollengode.png">
+    </div>
+
+</body>
+</html>
